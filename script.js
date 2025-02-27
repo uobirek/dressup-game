@@ -122,7 +122,7 @@ const clothingOptions = {
     bottom: 4,
     shoes: 3,
     socks: 3,
-    hairBack: 4,
+    hairBack: 3,
     hairFront: 2,
     accessory: 5,
 };
@@ -136,7 +136,9 @@ function generateClothingButtons() {
         // Create section header
         let sectionHeader = document.createElement("h3");
         sectionHeader.textContent = `Choose ${category.charAt(0).toUpperCase() + category.slice(1)}`;
-        menu.appendChild(sectionHeader);
+        let section = document.createElement("div");
+        section.classList.add("clothing-category");
+        section.appendChild(sectionHeader);
 
         // Generate buttons dynamically
         for (let i = 1; i <= count; i++) {
@@ -146,11 +148,15 @@ function generateClothingButtons() {
             let previewImg = document.createElement("img");
             previewImg.src = `assets/dressup/${category}_${i}.png`; // Set the correct source path
 
-            // Add the class for cropping for top and hair categories
-            if (category === "top" || category === "hairBack" || category === "hairFront") {
-                previewImg.classList.add("clothing-preview", category);  // Add the cropping class
+
+
+            if (category === "top" || category === "hairBack" || category === "hairFront" || category === "accessory") {
+                previewImg.classList.add("clothing-preview", category);
+            } else if (category === "shoes" || category === "socks") {
+                previewImg.classList.add("clothing-preview", category);
             } else {
                 previewImg.classList.add("clothing-preview");  // Normal preview for other categories
+
             }
 
             // Create a new div to hold the image
@@ -162,10 +168,20 @@ function generateClothingButtons() {
             button.onclick = () => changeClothes(category, `${category}_${i}.png`);
 
             // Add the button to the menu
-            menu.appendChild(button);
+            section.appendChild(button);
         }
+        // Create "Remove" button
+        let removeButton = document.createElement("button");
+        removeButton.textContent = `Remove ${category}`;
+        removeButton.classList.add("remove-button");
+        removeButton.onclick = () => changeClothes(category, ""); // Empty string to remove item
+        section.appendChild(removeButton);
+
+        // Add section to the menu
+        menu.appendChild(section);
     }
 }
+
 
 // Call function when page loads
 document.addEventListener("DOMContentLoaded", generateClothingButtons);
