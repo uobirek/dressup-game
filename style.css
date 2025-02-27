@@ -53,12 +53,8 @@ h1 {
 }
 
 button {
-    background-color: #ff69b4;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
     transition: all 0.3s ease-in-out;
@@ -121,4 +117,64 @@ button:hover {
 #dialog-box:hover {
     background: rgba(255, 105, 180, 1);
     /* Brighter pink on hover */
+}
+
+
+/* Layout for clothing categories */
+.clothing-category {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Clothing buttons */
+.clothing-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.clothing-button:hover {
+    transform: scale(1.1);
+}
+
+/* Miniature preview images */
+.clothing-preview {
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    background: white;
+
+}
+
+/* Crop images to only show the top half - Apply only to tops and hair */
+.clothing-preview.top,
+.clothing-preview.hairBack,
+.clothing-preview.hairFront {
+    width: 100px;
+    height: 150px;
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+
+}
+
+
+
+
+/* Remove button */
+.remove-button {
+    display: block;
+    margin: 10px auto;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #cc0000;
 }
