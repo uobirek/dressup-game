@@ -50,7 +50,7 @@ function generateClothingTabs() {
 
             button.appendChild(previewDiv);
             button.onclick = () => changeClothes(category, `${category}_${i}.png`);
-
+            makeDraggable(previewDiv);
             section.appendChild(button);
         }
 
@@ -60,6 +60,7 @@ function generateClothingTabs() {
         removeButton.classList.add("remove-button");
         removeButton.onclick = () => changeClothes(category, "");
         section.appendChild(removeButton);
+        makeDraggable(removeButton);
 
         contentContainer.appendChild(section);
     });

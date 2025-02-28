@@ -1,0 +1,32 @@
+#welcome-screen {
+    text-align: center;
+    padding: 50px;
+    background: #ffe4ec;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-screen h1 {
+    font-family: "Darumadrop One", sans-serif;
+    font-size: 3em;
+    color: #ff1493;
+}
+
+#welcome-screen button {
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: none;
+    background: #ff69b4;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#welcome-screen button:hover {
+    background: #ff1493;
+}

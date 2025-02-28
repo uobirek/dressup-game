@@ -5,38 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dress-up Game</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto Serif&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/character.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/clothing-menu.css">
     <link rel="stylesheet" href="css/dialog.css">
     <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/welcome.css">
+
 </head>
 
 <body>
-    <div id="page">
-        <h1>Dress-up Game</h1>
-        <div class="game">
-            <div class="row">
-                <div class="column">
-                    <div id="character" class="character"></div>
-                </div>
-                <div class="column">
-                    <div class="clothes-menu"><!-- Buttons will be generated here --></div>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>Welcome to the Dress-up Game!</h1>
+        <button id="start-button">Start</button>
+        <button id="options-button">Options</button>
+    </div>
+
+    <!-- Game Screen (Initially Hidden) -->
+    <div id="game-screen" style="display: none;">
+        <div id="page">
+            <h1>Dress-up Game</h1>
+            <div class="game">
+                <div class="row">
+                    <div class="column">
+                        <div id="character" class="character"></div>
+                    </div>
+                    <div class="column">
+                        <div class="clothes-menu"></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Dialog Box -->
-        <div id="dialog-box">
-            <p id="msg"></p>
+            <!-- Dialog Box -->
+            <div id="dialog-box">
+                <p id="msg"></p>
+            </div>
         </div>
     </div>
 
+    <script src="js/welcome.js"></script> <!-- New JS file for handling transitions -->
     <script src="js/character.js"></script>
     <script src="js/dialog.js"></script>
     <script src="js/clothing-menu.js"></script>
+    <script src="js/draggable-item.js"></script>
+
     <script src="js/main.js"></script>
 </body>
-
-</html>

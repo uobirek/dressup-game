@@ -22,8 +22,16 @@
 
 /* Clothing Preview Images */
 .clothing-preview {
-    width: 200px;
+    width: 100px;
     height: auto;
+    margin: 5px;
+    background-color: rgb(234, 238, 188);
+    border-radius: 5px;
+    pointer-events: none;
+    /* Makes the image invisible to mouse events */
+    user-select: none;
+
+
 }
 
 .clothing-preview.top,
@@ -31,8 +39,8 @@
 .clothing-preview.hairFront,
 .clothing-preview.accessory {
     object-fit: cover;
-    width: 200px;
-    height: 300px;
+    width: 100px;
+    height: 120px;
     overflow: hidden;
     object-position: top;
 }
@@ -40,14 +48,16 @@
 .clothing-preview.shoes,
 .clothing-preview.socks {
     object-fit: cover;
-    width: 200px;
-    height: 300px;
+    width: 100px;
+    height: 120px;
     overflow: hidden;
     object-position: bottom;
 }
 
 /* Remove Button */
 .remove-button {
+    font-family: 'Roboto Serif';
+
     display: block;
     margin: 10px auto;
     background-color: #ff4d4d;

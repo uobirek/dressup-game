@@ -1,7 +1,9 @@
 /* Character Container */
 .character {
     display: inline-block;
-    border: 2px solid #ff1493;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
     background: white;
     position: relative;
     border-radius: 10px;
@@ -10,7 +12,6 @@
 /* Character Layering */
 .center {
     position: absolute;
-    border: 1px solid red;
     left: 0%;
     top: 0%;
 }
