@@ -1,0 +1,32 @@
+/* Tabs Container */
+.tab-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Tab Buttons */
+.tab-button {
+    padding: 10px 15px;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: #666;
+    color: white;
+}
+
+.tab-button:hover {
+    background: #999;
+}
+
+/* Tab Content */
+.tab-content-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
