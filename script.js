@@ -3,7 +3,7 @@ function changeClothes(type, item) {
 
     let layerIds = {
         hairBack: "hair-back",
-        person: "person",  // Even though it doesn't change, it should be recognized
+        person: "person",
         socks: "clothing-socks",
         shoes: "clothing-shoes",
         bottom: "clothing-bottom",
@@ -35,17 +35,17 @@ function changeClothes(type, item) {
 
     // Set correct layering order
     let zIndexMap = {
-        hairBack: 0,   // Hair back - behind everything
+        hairBack: 0,
         person: 1,
         socks: 2,
         shoes: 3,
-        bottom: 4,     // Pants/skirt - below the top
+        bottom: 4,
         top: 5,
-        hairFront: 6,  // Hair front - in front of everything
-        accessory: 7   // Accessories on top
+        hairFront: 6,
+        accessory: 7
     };
 
-    newItem.style.position = "absolute";  // Needed for z-index to work
+    newItem.style.position = "absolute";
     newItem.style.zIndex = zIndexMap[type];
 
     character.appendChild(newItem);
