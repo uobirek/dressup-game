@@ -17,10 +17,14 @@
     <link rel="stylesheet" href="css/dialog.css">
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/options.css">
+
 
 </head>
 
 <body>
+
+
     <!-- Welcome Screen -->
     <div id="welcome-screen">
         <h1>Welcome to the Dress-up Game!</h1>
@@ -49,12 +53,29 @@
             </div>
         </div>
     </div>
+    <!-- Options Modal (Initially Hidden) -->
+    <div id="options-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Settings</h2>
+            <label>
+                <input type="checkbox" id="sound-toggle"> Sound
+            </label>
+
+            <label>
+                <input type="checkbox" id="dark-mode-toggle"> Dark Mode
+            </label>
+        </div>
+    </div>
+    <script src="js/sounds.js"></script>
 
     <script src="js/welcome.js"></script> <!-- New JS file for handling transitions -->
     <script src="js/character.js"></script>
     <script src="js/dialog.js"></script>
     <script src="js/clothing-menu.js"></script>
-    <script src="js/draggable-item.js"></script>
+    <script src="js/draggable.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/config.js"></script>
 
     <script src="js/main.js"></script>
 </body>

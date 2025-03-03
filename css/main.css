@@ -29,3 +29,35 @@ button {
 button:hover {
     transform: scale(1.1);
 }
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222 !important;
+    color: #ffb6c1 !important;
+    /* Light pink for readability */
+}
+
+/* Change heading color in Dark Mode */
+body.dark-mode h1 {
+    color: #ff69b4 !important;
+    /* Keep it stylish but visible */
+}
+
+/* Buttons in Dark Mode */
+body.dark-mode button {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+body.dark-mode button:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Options Modal Dark Mode */
+body.dark-mode .modal {
+    background-color: #333 !important;
+    color: white !important;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}

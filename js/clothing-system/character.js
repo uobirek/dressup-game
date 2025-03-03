@@ -4,10 +4,10 @@ function changeClothes(type, item) {
     let layerIds = {
         hairBack: "hair-back",
         person: "person",
-        socks: "clothing-socks",
-        shoes: "clothing-shoes",
-        bottom: "clothing-bottom",
-        top: "clothing-top",
+        socks: "socks",
+        shoes: "shoes",
+        bottom: "bottom",
+        top: "top",
         hairFront: "hair-front",
         accessory: "accessory"
     };

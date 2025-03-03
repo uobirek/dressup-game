@@ -32,26 +32,3 @@
     padding: 15px;
     border-radius: 5px;
 }
-
-.tab-content {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping to next line */
-    gap: 10px;
-    /* Space between buttons */
-}
-
-/* Ensure the clothing buttons align properly */
-.tab-content button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110px;
-    /* Adjust size */
-    height: 130px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
-}

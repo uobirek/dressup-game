@@ -1,16 +1,15 @@
 function makeDraggable(element, category, item) {
     let startX = 0, startY = 0;
     let translateX = 0, translateY = 0;
-    let originalParent = element.parentElement; // Save original position
+    let originalParent = element.parentElement;
     let originalTransform = element.style.transform;
+    let clickSound = new sound('sounds/click.wav');
 
     element.style.transform = "translate3d(0px, 0px, 0px)";
-    element.style.position = "absolute";
     element.style.willChange = "transform";
 
     element.addEventListener("mousedown", (e) => {
         e.preventDefault();
-
         startX = e.clientX - translateX;
         startY = e.clientY - translateY;
 
@@ -21,7 +20,6 @@ function makeDraggable(element, category, item) {
     function onMouseMove(e) {
         translateX = e.clientX - startX;
         translateY = e.clientY - startY;
-
         element.style.transform = `translate3d(${translateX}px, ${translateY}px, 0px)`;
     }
 
@@ -29,11 +27,10 @@ function makeDraggable(element, category, item) {
         document.removeEventListener("mousemove", onMouseMove);
         document.removeEventListener("mouseup", onMouseUp);
 
-        let character = document.getElementById("character"); // Get the character element
+        let character = document.getElementById("character");
         let charRect = character.getBoundingClientRect();
         let elemRect = element.getBoundingClientRect();
 
-        // Check if the dragged item is inside the character area
         let isInside =
             elemRect.left >= charRect.left &&
             elemRect.right <= charRect.right &&
@@ -41,11 +38,11 @@ function makeDraggable(element, category, item) {
             elemRect.bottom <= charRect.bottom;
 
         if (isInside) {
-            // Drop on character -> Change clothes
             changeClothes(category, item);
-            element.remove(); // Remove item from the tab
+            clickSound.play();
+            resetTab(category);
+            element.remove();
         } else {
-            // Drop outside -> Reset to original position
             element.style.transform = originalTransform;
             originalParent.appendChild(element);
         }
