@@ -4,23 +4,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    /* Creates the "border" effect */
+
 }
 
-#welcome-screen {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(#F8CCED, #FFFEFF);
-    height: 90vh;
-    width: 90vw;
+/* Ensure .screen is a flex container */
+.screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    text-align: center;
+    background: linear-gradient(#F8CCED, #FFFEFF);
+    height: 90vh;
+    width: 90vw;
+    box-sizing: border-box;
     border-radius: 30px;
-    /* Inner rounded corners */
     border: 8px solid #EDD594;
-    /* This adds the stroke */
+    overflow: hidden;
+}
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 3vh, 80px);
 }

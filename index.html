@@ -28,28 +28,27 @@
     <!-- Outer container (Yellow Background) -->
     <div id="outer-container">
         <!-- Inner Welcome Screen -->
-        <div id="welcome-screen">
-            <h1>Penelope's Closet</h1>
-            <button id="start-button">Start</button>
-            <button id="options-button">Options</button>
+        <div id="welcome-screen" class="screen">
+            <h1>Penelope's<br /> Closet</h1>
+            <button id="start-button" class="menu-button">Start</button>
+            <button id="options-button" class="menu-button">Options</button>
         </div>
 
 
 
         <!-- Game Screen (Initially Hidden) -->
         <div id="game-screen" style="display: none;">
-            <div id="page">
-                <h1>Dress-up Game</h1>
-                <div class="game">
-                    <div class="row">
-                        <div class="column">
-                            <div id="character" class="character"></div>
-                        </div>
-                        <div class="column">
-                            <div class="clothes-menu"></div>
-                        </div>
+
+            <div id="game" class="screen">
+                <div class="row">
+                    <div class="left-column">
+                        <div id="character" class="character"></div>
+                    </div>
+                    <div class="right-column">
+                        <div class="clothes-menu"></div>
                     </div>
                 </div>
+
 
                 <!-- Dialog Box
                 <div id="dialog-box">

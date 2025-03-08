@@ -5,5 +5,5 @@ const clothingOptions = {
     socks: 3,
     hairBack: 3,
     hairFront: 2,
-    accessory: 5,
+    accessory: 7,
 };

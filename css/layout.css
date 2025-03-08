@@ -1,26 +1,19 @@
-/* Main Page Container */
-#page {
-    padding: 20px;
-}
-
-/* Game Layout */
-.game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
 .row {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.column {
-    width: 50%;
-    padding: 10px;
+.left-column {
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.right-column {
+    width: 60%;
+
     display: flex;
     justify-content: center;
 }

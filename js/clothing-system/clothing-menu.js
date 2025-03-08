@@ -43,7 +43,7 @@ function createClothingButton(category, index) {
     let button = document.createElement("button");
 
     let previewImg = document.createElement("img");
-    previewImg.src = `assets/dressup/${category}_${index}.png`;
+    previewImg.src = `assets/previews/${category}_${index}.png`;
     previewImg.classList.add("clothing-preview", category);
 
     let previewDiv = document.createElement("div");
