@@ -9,7 +9,17 @@ function generateClothingTabs() {
 
     Object.keys(clothingOptions).forEach((category, index) => {
         let tabButton = document.createElement("button");
-        tabButton.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        const icon = document.createElement("img");
+
+        icon.src = `assets/icons/${category}.svg`; // Assuming the icon file name matches the category
+
+        icon.alt = category; // Accessibility
+        icon.style.width = "40px"; // Adjust icon size as needed
+        icon.style.height = "40px";
+        icon.style.objectFit = "contain"; // Ensures it doesn't stretch
+
+        tabButton.appendChild(icon);
+
         tabButton.classList.add("tab-button");
         if (index === 0) tabButton.classList.add("active");
         tabButton.onclick = () => showTab(category);
@@ -41,6 +51,8 @@ function generateClothingTabs() {
 
 function createClothingButton(category, index) {
     let button = document.createElement("button");
+    button.classList.add("clothing-button");
+
 
     let previewImg = document.createElement("img");
     previewImg.src = `assets/previews/${category}_${index}.png`;

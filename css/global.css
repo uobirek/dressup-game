@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Darumadrop One';
     text-align: center;
@@ -7,49 +8,51 @@ body {
     padding: 0;
 }
 
+/* Heading */
 h1 {
     font-family: 'Darumadrop One';
-    font-size: 9vw;
+    font-size: clamp(50px, 9vw, 96px);
     paint-order: stroke fill;
     color: #F8E5B2;
     text-shadow: 0px 4px 4px #A8236C;
     -webkit-text-stroke: 0.2em #E879B6;
-    line-height: 8.5vw;
+    line-height: clamp(40px, 8.5vw, 80px);
 }
 
-.menu-button {
-    width: clamp(250px, 20vw, 250px);
-    height: clamp(50px, 7vh, 70px);
-    font-size: clamp(20px, 2vw + 2vh, 40px);
-    border-radius: 10px;
-    background: linear-gradient(#F8F1DE, #F4D992);
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
-    font-family: 'Darumadrop One';
-    transition: all 0.3s ease-in-out;
-    color: #B566CB;
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(#F8CCED, #FFFEFF);
+    height: 90vh;
+    width: 90vw;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 8px solid #EDD594;
+    overflow: hidden;
+    padding: 20px;
 }
 
-
-button:hover {
-    transform: scale(1.1);
+#outer-container {
+    background: #F8E5B2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
     background-color: #222 !important;
     color: #ffb6c1 !important;
-    /* Light pink for readability */
 }
 
-/* Change heading color in Dark Mode */
 body.dark-mode h1 {
     color: #ff69b4 !important;
-    /* Keep it stylish but visible */
 }
 
-/* Buttons in Dark Mode */
 body.dark-mode button {
     color: white !important;
     background: rgba(255, 255, 255, 0.2) !important;
@@ -61,7 +64,6 @@ body.dark-mode button:hover {
     background: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Options Modal Dark Mode */
 body.dark-mode .modal {
     background-color: #333 !important;
     color: white !important;

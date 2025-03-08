@@ -1,0 +1,27 @@
+/* Welcome Screen Layout */
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 3vh, 80px);
+}
+
+/* Menu Button */
+.menu-button {
+    width: clamp(160px, 20vw, 210px);
+    height: clamp(50px, 7vh, 60px);
+    font-size: clamp(20px, 2vw + 2vh, 35px);
+    border-radius: 10px;
+    background: linear-gradient(#F8F1DE, #F4D992);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
+    font-family: 'Darumadrop One';
+    transition: all 0.3s ease-in-out;
+    color: #B566CB;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+}

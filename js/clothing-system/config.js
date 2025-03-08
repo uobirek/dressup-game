@@ -3,7 +3,7 @@ const clothingOptions = {
     bottom: 4,
     shoes: 3,
     socks: 3,
-    hairBack: 3,
     hairFront: 2,
+    hairBack: 3,
     accessory: 7,
 };

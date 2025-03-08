@@ -1,22 +1,30 @@
-/* Clothing Menu Container */
 .clothes-menu {
-    padding: 15px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.3);
+    border-radius: 20px;
+    background-color: #F8E5B2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensures it fills the available space */
+    width: 100%;
+    /* Takes up full width */
+    box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
+    /* Ensures contents don't overflow */
 }
 
-/* Section Headers */
-.clothes-menu h3 {
-    color: #ff1493;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.clothing-button {
+    background-color: transparent;
+    border: none;
 }
 
 /* Clothing Category */
 .clothing-category {
-    margin-bottom: 20px;
-    text-align: center;
+    flex-grow: 1;
+    /* Forces it to take up full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Keeps items centered */
+    align-items: center;
 }
 
 /* Clothing Preview Images */
@@ -24,10 +32,8 @@
     width: 80px;
     height: auto;
     margin: 5px;
-    background-color: rgb(234, 238, 188);
     border-radius: 5px;
     pointer-events: none;
-    /* Makes the image invisible to mouse events */
     user-select: none;
 
 
@@ -38,8 +44,8 @@
 .clothing-preview.hairFront,
 .clothing-preview.accessory {
     object-fit: cover;
-    width: 100px;
-    height: 120px;
+    width: 10vw;
+
     overflow: hidden;
     object-position: top;
 }
