@@ -1,7 +1,7 @@
 /* General Styles */
 
 body {
-    font-family: 'Roboto Serif';
+    font-family: 'Darumadrop One';
     text-align: center;
     background-color: #ffe4ec;
     color: #ff69b4;
@@ -12,18 +12,27 @@ body {
 /* Titles & Headings */
 h1 {
     font-family: 'Darumadrop One';
-
-    font-size: 2.5em;
-    color: #ff1493;
+    font-size: 96px;
+    paint-order: stroke fill;
+    color: #F8E5B2;
+    text-shadow: 0px 4px 4px #A8236C;
+    -webkit-text-stroke: 0.2em #E879B6;
 }
 
 /* Buttons */
 button {
-    background: transparent;
+    width: 250px;
+    height: 70px;
+    border-radius: 10px;
+    background: linear-gradient(#F8F1DE, #F4D992);
     border: none;
     cursor: pointer;
-    font-size: 1em;
+    box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
+
+    font-family: 'Darumadrop One';
+    font-size: 48px;
     transition: all 0.3s ease-in-out;
+    color: #B566CB;
 }
 
 button:hover {

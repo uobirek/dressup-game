@@ -1,32 +1,26 @@
+#outer-container {
+    background: #F8E5B2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Creates the "border" effect */
+}
+
 #welcome-screen {
     text-align: center;
     padding: 50px;
-    background: #ffe4ec;
-    height: 100vh;
+    background: linear-gradient(#F8CCED, #FFFEFF);
+    height: 90vh;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#welcome-screen h1 {
-    font-family: "Darumadrop One", sans-serif;
-    font-size: 3em;
-    color: #ff1493;
-}
-
-#welcome-screen button {
-    margin: 15px;
-    padding: 10px 20px;
-    font-size: 1.5em;
-    border: none;
-    background: #ff69b4;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#welcome-screen button:hover {
-    background: #ff1493;
+    gap: 24px;
+    border-radius: 30px;
+    /* Inner rounded corners */
+    border: 8px solid #EDD594;
+    /* This adds the stroke */
 }
