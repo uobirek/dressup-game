@@ -28,9 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /*** 🔹 Level-specific Dialog Lines ***/
     const levelDialogs = {
         1: [
-            "Welcome to level 1! Let's dress up!",
-            "Click on the buttons to choose your outfit.",
-            "Try out different styles and have fun!"
+            "Welcome to level 1! Let's dress up!"
         ],
         2: [
             "Nice work! Ready for level 2?",

@@ -45,7 +45,6 @@ function changeClothes(type, item) {
 
     character.appendChild(newItem);
 }
-
 function initCharacter() {
     let character = document.getElementById("character");
 
@@ -66,9 +65,31 @@ function initCharacter() {
         character.appendChild(body);
     }
 
+    // ✅ Add default hair
+    if (!document.getElementById("hair-back")) {
+        let hairBack = document.createElement("img");
+        hairBack.src = "assets/dressup/hairBack_3.png"; // Update with your default hair-back image
+        hairBack.id = "hair-back";
+        hairBack.classList.add("center", "center-fit");
+        hairBack.style.position = "absolute";
+        hairBack.style.zIndex = 0;
+
+        character.appendChild(hairBack);
+    }
+
+    if (!document.getElementById("hair-front")) {
+        let hairFront = document.createElement("img");
+        hairFront.src = "assets/dressup/hairFront_1.png"; // Update with your default hair-front image
+        hairFront.id = "hair-front";
+        hairFront.classList.add("center", "center-fit");
+        hairFront.style.position = "absolute";
+        hairFront.style.zIndex = 6;
+
+        character.appendChild(hairFront);
+    }
+
     // ✅ Reset selected clothing state (if you're tracking selected items)
     selectedClothes = {};
 }
-
 
 window.onload = initCharacter;

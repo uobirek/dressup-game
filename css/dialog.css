@@ -15,17 +15,13 @@
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
 
-    /* Flexbox to center the text inside */
     display: flex;
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
     text-align: center;
-    /* Ensure text inside is centered */
 }
 
 #dialog-box:hover {
-    background: #ebbbd5;
+    background: #ffeff8;
     /* Brighter pink on hover */
 }
