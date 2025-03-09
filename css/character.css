@@ -11,6 +11,7 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+
 }
 
 /* Character Image */
@@ -27,5 +28,6 @@
     max-height: 100vh;
     margin: auto;
     object-fit: contain;
-    z-index: 1;
+
+
 }

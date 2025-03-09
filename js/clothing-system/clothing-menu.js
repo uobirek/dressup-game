@@ -1,6 +1,9 @@
 function generateClothingTabs() {
     const menu = document.querySelector(".clothes-menu");
 
+    // ✅ Fix: Clear any existing content to prevent duplication
+    menu.innerHTML = "";
+
     const tabContainer = document.createElement("div");
     tabContainer.classList.add("tab-container");
 
@@ -11,15 +14,13 @@ function generateClothingTabs() {
         let tabButton = document.createElement("button");
         const icon = document.createElement("img");
 
-        icon.src = `assets/icons/${category}.svg`; // Assuming the icon file name matches the category
-
-        icon.alt = category; // Accessibility
-        icon.style.width = "40px"; // Adjust icon size as needed
+        icon.src = `assets/icons/${category}.svg`;
+        icon.alt = category;
+        icon.style.width = "40px";
         icon.style.height = "40px";
-        icon.style.objectFit = "contain"; // Ensures it doesn't stretch
+        icon.style.objectFit = "contain";
 
         tabButton.appendChild(icon);
-
         tabButton.classList.add("tab-button");
         if (index === 0) tabButton.classList.add("active");
         tabButton.onclick = () => showTab(category);
@@ -37,7 +38,7 @@ function generateClothingTabs() {
         }
 
         let removeButton = document.createElement("button");
-        removeButton.textContent = `Remove ${category}`;
+        removeButton.textContent = `Remove`;
         removeButton.classList.add("remove-button");
         removeButton.onclick = () => changeClothes(category, "");
         section.appendChild(removeButton);
@@ -48,6 +49,7 @@ function generateClothingTabs() {
     menu.appendChild(tabContainer);
     menu.appendChild(contentContainer);
 }
+
 
 function createClothingButton(category, index) {
     let button = document.createElement("button");

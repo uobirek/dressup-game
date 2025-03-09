@@ -49,6 +49,12 @@ function changeClothes(type, item) {
 function initCharacter() {
     let character = document.getElementById("character");
 
+    // ✅ Remove all clothing layers
+    Object.values(document.querySelectorAll("#character img")).forEach(img => {
+        if (img.id !== "person") img.remove(); // Keep the body, remove everything else
+    });
+
+    // ✅ Ensure the body exists
     if (!document.getElementById("person")) {
         let body = document.createElement("img");
         body.src = "assets/dressup/body.png";
@@ -59,6 +65,10 @@ function initCharacter() {
 
         character.appendChild(body);
     }
+
+    // ✅ Reset selected clothing state (if you're tracking selected items)
+    selectedClothes = {};
 }
+
 
 window.onload = initCharacter;

@@ -37,24 +37,30 @@
 
 
         <!-- Game Screen (Initially Hidden) -->
-        <div id="game-screen" style="display: none;">
 
-            <div id="game" class="screen">
-                <div class="row">
-                    <div class="left-column">
-                        <div id="character" class="character"></div>
-                    </div>
-                    <div class="right-column">
-                        <div class="clothes-menu"></div>
-                    </div>
+        <div id="game-screen" class="screen" style="display: none;">
+            <div class="row">
+                <div class="left-column">
+                    <div id="character" class="character"></div>
                 </div>
-
-
-                <!-- Dialog Box
-                <div id="dialog-box">
-                    <p id="msg"></p>
-                </div> -->
+                <div class="right-column">
+                    <div class="clothes-menu"></div>
+                </div>
             </div>
+            <button id="next-dressup-button" class="menu-button">Next</button>
+
+        </div>
+
+
+        <div id="dialog-screen" class="screen" style="display: none;">
+            <div id="dialog-box" class="dialog-box">
+                <p id="dialog-text"></p>
+            </div>
+        </div>
+
+        <div id="stage-complete-screen" class="screen" style="display: none;">
+            <h2>Stage Complete!</h2>
+            <button id="next-stage-button">Next Level</button>
         </div>
         <!-- Options Modal (Initially Hidden) -->
         <div id="options-modal" class="modal">
