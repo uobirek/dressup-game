@@ -17,9 +17,9 @@ const maxLevels = 3;
 function finishDressup() {
     let score = calculateScore(selectedClothes, currentLevel);
 
-    document.getElementById("scoreDisplay").innerText = `Your score: ${score}`;
-
     showScreen(screens.stageComplete);
+    showScoreScreen(score);
+
     resetCharacter();
 }
 

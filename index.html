@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/welcome-screen.css">
     <link rel="stylesheet" href="css/options.css">
+    <link rel="stylesheet" href="css/stage-complete.css">
 
 
 </head>
@@ -61,8 +62,14 @@
         </div>
 
         <div id="stage-complete-screen" class="screen" style="display: none;">
-            <h2>Stage Complete!</h2>
-            <div id="scoreDisplay"></div>
+            <h2>Stage Complete! 🎉</h2>
+            <div class="stars-container">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+            </div>
+            <div id="scoreDisplay">Score: <span id="scoreNumber">0</span></div>
+            <canvas id="confettiCanvas"></canvas>
             <button id="next-stage-button">Next Level</button>
         </div>
         <!-- Options Modal (Initially Hidden) -->
@@ -87,6 +94,7 @@
     <script src="js/clothing-system/config.js"></script>
     <script src="js/sound.js"></script>
     <script src="js/scoring-system.js"></script>
+    <script src="js/stage-complete.js"></script>
 
     <script type="module" src="js/ui.js"></script>
     <script type="module" src="js/character.js"></script>
