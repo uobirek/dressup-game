@@ -1,3 +1,5 @@
+let selectedClothes = {}; // Stores the chosen clothing items
+
 function changeClothes(type, item) {
     let character = document.getElementById("character");
 
@@ -22,7 +24,10 @@ function changeClothes(type, item) {
         existingItem.remove();
     }
 
-    if (!item) return;
+    if (!item) {
+        delete selectedClothes[type]; // Remove from selectedClothes if no item
+        return;
+    }
 
     let newItem = document.createElement("img");
     newItem.src = `assets/dressup/${item}`;
@@ -44,7 +49,11 @@ function changeClothes(type, item) {
     newItem.style.zIndex = zIndexMap[type];
 
     character.appendChild(newItem);
+
+    // ✅ Store selected clothing item
+    selectedClothes[type] = item;
 }
+
 function initCharacter() {
     let character = document.getElementById("character");
 
