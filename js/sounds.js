@@ -1,21 +1,27 @@
 // Define the sound class
-function sound(src) {
-    this.sound = document.createElement("audio");
-    this.sound.src = src;
-    this.sound.setAttribute("preload", "auto");
-    this.sound.setAttribute("controls", "none");
-    this.sound.style.display = "none";
-    document.body.appendChild(this.sound);
 
-    this.play = function () {
+
+class Sound {
+    constructor(src) {
+        this.sound = new Audio(src);
+    }
+
+    play() {
         this.sound.play();
     }
 
-    this.stop = function () {
+    stop() {
         this.sound.pause();
+        this.sound.currentTime = 0;
     }
 
-    this.loop = function () {
+    loop() {
         this.sound.loop = true;
     }
 }
+
+let backgroundSound = new Sound("sounds/background.mp3");
+backgroundSound.loop();
+backgroundSound.sound.volume = 0.2;
+
+export { backgroundSound };

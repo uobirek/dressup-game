@@ -67,6 +67,7 @@ function initCharacter() {
 
     // ✅ Add default hair
     if (!document.getElementById("hair-back")) {
+        console.log("no hair")
         let hairBack = document.createElement("img");
         hairBack.src = "assets/dressup/hairBack_3.png"; // Update with your default hair-back image
         hairBack.id = "hair-back";
@@ -75,6 +76,8 @@ function initCharacter() {
         hairBack.style.zIndex = 0;
 
         character.appendChild(hairBack);
+    } else {
+        console.log("hair");
     }
 
     if (!document.getElementById("hair-front")) {
@@ -93,3 +96,6 @@ function initCharacter() {
 }
 
 window.onload = initCharacter;
+
+
+
