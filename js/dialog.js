@@ -5,10 +5,17 @@ let currentLine = 0;
 let typing = false;
 let interval;
 
+
 const levelDialogs = {
     1: ["Welcome to level 1! Let's dress up!"],
     2: ["Nice work! Ready for level 2?", "Try mixing and matching different styles!", "Can you create a bold look?"],
     3: ["Final level! Make it stylish!", "Show off your best fashion sense!", "You're a fashion star!"]
+};
+let levelThemeDiv = document.getElementById('level-theme');
+const levelThemes = {
+    1: "casual coffe date",
+    2: "pijama party",
+    3: "fancy",
 };
 
 // Typing effect
@@ -56,7 +63,9 @@ export function nextDialog(level) {
     } else {
         console.log("✅ Finished dialog, moving to dress-up game.");
         showScreen(screens.game);
+        levelThemeDiv.textContent = levelThemes[currentLevel];
         generateClothingTabs();
+
 
     }
 }

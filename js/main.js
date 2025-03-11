@@ -13,6 +13,7 @@ const buttons = {
 export let currentLevel = 1;
 const maxLevels = 3;
 
+
 /*** 🔹 Function to Move to Stage Complete ***/
 function finishDressup() {
     let score = calculateScore(selectedClothes, currentLevel);
