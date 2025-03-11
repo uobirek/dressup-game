@@ -1,7 +1,9 @@
+const minScore = 50; // Minimum score required to proceed
+
 function showScoreScreen(finalScore) {
     const scoreDisplay = document.getElementById("scoreNumber");
     const stageScreen = document.getElementById("stage-complete-screen");
-    const stars = document.querySelectorAll(".star");
+    const stageTitle = stageScreen.querySelector("h2"); // Get the heading
     const message = document.getElementById("scoreMessage");
 
     let currentScore = 0;
@@ -15,6 +17,14 @@ function showScoreScreen(finalScore) {
             clearInterval(scoreInterval);
             message.textContent = "Your Score:"; // Change text after calculation
             revealStars(finalScore); // Show stars after score completes
+
+            // **🔹 Check if level is passed or failed**
+            if (finalScore >= minScore) {
+                stageTitle.textContent = "Stage Complete! 🎉"; // Normal completion
+                startConfetti(); // 🎉 Start confetti if passed
+            } else {
+                stageTitle.textContent = "Try Again! 😢"; // Level failed message
+            }
         } else {
             currentScore += Math.ceil(finalScore / 50); // Adjust step for smoothness
             scoreDisplay.textContent = currentScore;
@@ -22,6 +32,24 @@ function showScoreScreen(finalScore) {
     }, 30);
 }
 
+function revealStars(score) {
+    const stars = document.querySelectorAll(".star");
+
+    setTimeout(() => {
+        if (score >= 150) {
+            stars[0].style.opacity = "1";
+            stars[1].style.opacity = "1";
+            stars[2].style.opacity = "1"; // Full 3 stars
+        } else if (score >= 100) {
+            stars[0].style.opacity = "1";
+            stars[1].style.opacity = "1"; // 2 stars
+        } else if (score >= 50) {
+            stars[0].style.opacity = "1"; // 1 star
+        }
+
+        setTimeout(startConfetti, 500); // 🎉 Start confetti after stars appear
+    }, 500);
+}
 
 // Confetti Effect
 function startConfetti() {

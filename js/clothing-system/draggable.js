@@ -1,3 +1,4 @@
+
 function makeDraggable(element, category, item) {
     let startX = 0, startY = 0;
     let translateX = 0, translateY = 0;

@@ -20,9 +20,21 @@ function finishDressup() {
     showScreen(screens.stageComplete);
     showScoreScreen(score);
 
+    // Change button behavior based on score
+    if (score < minScore) {
+        buttons.nextStage.textContent = "Retry Level"; // Change button text
+        buttons.nextStage.onclick = retryLevel; // Set to retry
+    } else {
+        buttons.nextStage.textContent = "Next Level"; // Change button text
+        buttons.nextStage.onclick = nextStage; // Set to move forward
+    }
+
     resetCharacter();
 }
-
+function retryLevel() {
+    showDialog(currentLevel); // Restart the same level
+    resetCharacter(); // Reset dress-up choices
+}
 
 /*** 🔹 Function to Start Next Level or Finish Game ***/
 function nextStage() {
@@ -41,4 +53,3 @@ buttons.start.addEventListener("click", () => showDialog(currentLevel));
 
 
 buttons.nextDressup.addEventListener("click", finishDressup);
-buttons.nextStage.addEventListener("click", nextStage);

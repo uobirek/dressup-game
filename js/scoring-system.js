@@ -57,13 +57,14 @@ export function calculateScore(outfit, levelNumber) {
     }
 
     let score = 0;
-
+    console.log("we cleaned score: ", score);
     if (!outfit.top || !outfit.bottom) {
         console.error("Both a top and a bottom must be worn!");
         return 0;
     }
 
     Object.values(outfit).forEach(item => {
+        console.log("item: ", item);
         if (!item) return; // Skip if no item is selected
         let itemData = Object.values(clothingItems).flat().find(i => i.name === item);
         if (!itemData) return;

@@ -4,12 +4,10 @@ export { resetCharacter };
 function resetCharacter() {
     let character = document.getElementById("character");
 
-    // ✅ Remove all clothing layers except for the body and hair
     Object.values(document.querySelectorAll("#character img")).forEach(img => {
         if (!["person", "hair-back", "hair-front"].includes(img.id)) img.remove();
     });
 
-    // ✅ Ensure the body exists
     if (!document.getElementById("person")) {
         let body = document.createElement("img");
         body.src = "assets/dressup/body.png";
@@ -20,7 +18,6 @@ function resetCharacter() {
         character.appendChild(body);
     }
 
-    // ✅ Ensure default hair exists
     if (!document.getElementById("hair-back")) {
         let hairBack = document.createElement("img");
         hairBack.src = "assets/dressup/hairBack_3.png";
@@ -40,5 +37,7 @@ function resetCharacter() {
         hairFront.style.zIndex = 6;
         character.appendChild(hairFront);
     }
+    selectedClothes = {};
+
 }
 
