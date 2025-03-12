@@ -7,14 +7,41 @@ let interval;
 
 
 const levelDialogs = {
-    1: ["Welcome to level 1! Let's dress up!"],
-    2: ["Nice work! Ready for level 2?", "Try mixing and matching different styles!", "Can you create a bold look?"],
-    3: ["Final level! Make it stylish!", "Show off your best fashion sense!", "You're a fashion star!"]
+    1: [
+        { text: "Penelope has a problem and I do too!", imageId: 1 },
+        { text: "She has a full closet but nothing to wear, so she summoned a fashion fairy. That's me.", imageId: 3 },
+        { text: "But it's my first day at job and I have no idea what to do. Can you help me?", imageId: 2 },
+        { text: "She's going to a coffee shop today with friends, so she needs to wear something casual but cute.", imageId: 1 },
+        { text: "And no high heels, because after coffee they're planning on a long walk!", imageId: 3 },
+        { text: "Come on! Let's help her!", imageId: 3 }
+    ],
+    2: [
+        { text: "It's me again! You're the best, I'm learning so much from you.", imageId: 1 },
+        { text: "This time Penelope has to study for an algebra exam.", imageId: 2 },
+        { text: "Even trying to think about it makes my head explode!", imageId: 2 },
+        { text: "She's going to stay at home and needs to be comfy. And no shoes!", imageId: 1 }
+    ],
+    3: [
+        { text: "Thank you soooo much for all the help!", imageId: 1 },
+        { text: "This time let's do something fancy!", imageId: 3 },
+        { text: "Penelope's going on a date! Prepare something pretty and some jewelry.", imageId: 3 }
+    ]
 };
+
+function getFairyImageById(imageId) {
+    const imageMap = {
+        1: "assets/fairy/dressup-fairy-default.png", // Default image
+        2: "assets/fairy/dressup-fairy-sad.png",     // Sad image
+        3: "assets/fairy/dressup-fairy-winky.png"    // Winky image
+    };
+
+    return imageMap[imageId] || imageMap[1]; // Default to the first image if no match
+}
+
 let levelThemeDiv = document.getElementById('level-theme');
 const levelThemes = {
-    1: "casual coffe date",
-    2: "pijama party",
+    1: "coffee & walk",
+    2: "study session",
     3: "fancy",
 };
 
@@ -45,7 +72,19 @@ export function showDialog(level) {
     document.getElementById("dialog-box").onclick = () => nextDialog(level);
 }
 
+const fairyImages = {
+    1: "assets/fairy/dressup-fairy-default.png",
+    2: "assets/fairy/dressup-fairy-sad.png",
+    3: "assets/fairy/dressup-fairy-winky.png",
+};
 
+// Function to change the fairy image based on the current dialog line
+function changeFairyImage(imagePath) {
+    const fairyImage = document.getElementById("fairy").querySelector("img");
+
+    // Update the image source
+    fairyImage.src = imagePath;
+}
 
 export function nextDialog(level) {
     console.log("nextDialog called with level:", level);
@@ -58,18 +97,24 @@ export function nextDialog(level) {
     if (typing) return;
 
     if (currentLine < levelDialogs[level].length) {
-        printLetterByLetter("dialog-text", levelDialogs[level][currentLine], 50);
+        // Get the current dialog object for the line
+        const currentDialog = levelDialogs[level][currentLine];
+        const imagePath = getFairyImageById(currentDialog.imageId);
+        changeFairyImage(imagePath);
+        // Print the dialog text
+        printLetterByLetter("dialog-text", currentDialog.text, 50, () => {
+            // After printing the dialog, change the fairy image based on the imageId
+
+        });
+
         currentLine++;
     } else {
         console.log("✅ Finished dialog, moving to dress-up game.");
         showScreen(screens.game);
         levelThemeDiv.textContent = levelThemes[currentLevel];
         generateClothingTabs();
-
-
     }
 }
-
 
 document.getElementById("dialog-box").addEventListener("click", () => nextDialog(currentLevel));
 

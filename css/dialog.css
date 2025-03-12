@@ -1,27 +1,53 @@
+#dialog-box:hover {
+    background: #ffeff8;
+    /* Brighter pink on hover */
+}
+
+#dialog-screen {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Align items to the left */
+}
+
+
+
+#fairy img {
+    width: 25vw;
+    /* Adjust this value as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 15px;
+    /* Space between image and text */
+    flex-shrink: 0;
+    /* Prevent the image from shrinking */
+}
+
 #dialog-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vw;
+    flex-grow: 1;
+    /* Allow dialog box to take up remaining space */
+    width: auto;
+    /* Makes the width adjust to the content */
     max-width: 600px;
-    height: clamp(50px, 20vh, 100px);
+    /* Optional, if you want a maximum width */
+    height: auto;
+    /* Makes the height adjust to the content */
     background: #FFFBFB;
     color: #B462A1;
     padding: 15px;
+    /* Padding around the text */
     font-size: clamp(20px, 2vw + 2vh, 30px);
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#dialog-box:hover {
-    background: #ffeff8;
-    /* Brighter pink on hover */
+    word-wrap: break-word;
+    /* Ensure the text wraps within the box */
 }
