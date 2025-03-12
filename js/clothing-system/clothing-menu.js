@@ -4,7 +4,6 @@
 function generateClothingTabs() {
     const menu = document.querySelector(".clothes-menu");
 
-    // ✅ Fix: Clear any existing content to prevent duplication
     menu.innerHTML = "";
 
     const tabContainer = document.createElement("div");
@@ -23,20 +22,20 @@ function generateClothingTabs() {
             .then(response => {
                 if (response.ok) {
                     icon.src = svgPath;
-                    icon.style.width = "40px";  // Set consistent size for SVG
+                    icon.style.width = "40px";
                     icon.style.height = "40px";
                 } else {
-                    throw new Error("SVG not found"); // Force fallback to PNG
+                    throw new Error("SVG not found");
                 }
             })
             .catch(() => {
                 icon.src = pngPath;
-                icon.style.width = "60px"; // Adjust size for PNG
+                icon.style.width = "60px";
                 icon.style.height = "60px";
             });
 
         icon.alt = category;
-        icon.style.objectFit = "contain"; // Ensures it scales properly
+        icon.style.objectFit = "contain";
 
         tabButton.appendChild(icon);
         tabButton.classList.add("tab-button");

@@ -1,10 +1,7 @@
-/* Dialog Box Hover Effect */
 #dialog-box:hover {
     background: var(--hover-bg);
-    /* Brighter pink or appropriate dark mode hover effect */
 }
 
-/* Dialog Screen */
 #dialog-screen {
     align-items: center;
     display: flex;
@@ -13,48 +10,33 @@
 
 }
 
-/* Row Flexbox */
 .row {
     display: flex;
     align-items: center;
-    /* Align items vertically */
     justify-content: center;
-    /* Align items to the left */
 }
 
-/* Fairy Image */
 #fairy img {
     -webkit-filter: drop-shadow(5px 5px 5px var(--image-shadow));
     filter: drop-shadow(5px 5px 5px var(--image-shadow));
     width: 25vw;
-    /* Adjust this value as needed */
     height: auto;
-    /* Maintain aspect ratio */
     margin-right: 15px;
-    /* Space between image and text */
     flex-shrink: 0;
-    /* Prevent the image from shrinking */
 }
 
-/* Dialog Box */
 #dialog-box {
     flex-grow: 1;
-    /* Allow dialog box to take up remaining space */
     width: auto;
-    /* Makes the width adjust to the content */
     max-width: 600px;
-    /* Optional, if you want a maximum width */
     height: auto;
-    /* Makes the height adjust to the content */
     background: var(--dialog-bg);
     color: var(--dialog-text-color);
     padding: 15px;
-    /* Padding around the text */
     font-size: clamp(20px, 2vw + 2vh, 30px);
     border-radius: 10px;
     box-shadow: 0px 4px 4px var(--image-shadow);
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
     word-wrap: break-word;
-    /* Ensure the text wraps within the box */
 }

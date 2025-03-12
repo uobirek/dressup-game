@@ -1,4 +1,3 @@
-/*** 🔹 Character Handling ***/
 export { resetCharacter };
 
 function resetCharacter() {

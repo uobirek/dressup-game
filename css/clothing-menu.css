@@ -8,12 +8,9 @@
     display: flex;
     flex-direction: column;
     height: 70vh;
-    /* Takes up the full viewport height */
     width: 60vw;
-    /* Adjust width based on content or a fixed value if needed */
     max-width: 60vw;
 
-    /* Prevent it from exceeding viewport width */
     box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
 }
 
@@ -24,7 +21,6 @@
 
 }
 
-/* Clothing Category */
 .clothing-category {
     flex-grow: 1;
     display: flex;
@@ -33,7 +29,6 @@
     align-items: center;
 }
 
-/* Clothing Preview Images */
 .clothing-preview {
     width: 80px;
     height: auto;
@@ -67,7 +62,6 @@
 
 }
 
-/* Remove Button */
 .remove-button {
     font-family: 'Roboto Serif';
 

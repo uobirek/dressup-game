@@ -1,4 +1,4 @@
-let selectedClothes = {}; // Stores the chosen clothing items
+let selectedClothes = {};
 
 function changeClothes(type, item) {
     let character = document.getElementById("character");
@@ -25,7 +25,7 @@ function changeClothes(type, item) {
     }
 
     if (!item) {
-        delete selectedClothes[type]; // Remove from selectedClothes if no item
+        delete selectedClothes[type];
         return;
     }
 
@@ -50,19 +50,16 @@ function changeClothes(type, item) {
 
     character.appendChild(newItem);
 
-    // ✅ Store selected clothing item
     selectedClothes[type] = item;
 }
 
 function initCharacter() {
     let character = document.getElementById("character");
 
-    // ✅ Remove all clothing layers
     Object.values(document.querySelectorAll("#character img")).forEach(img => {
-        if (img.id !== "person") img.remove(); // Keep the body, remove everything else
+        if (img.id !== "person") img.remove();
     });
 
-    // ✅ Ensure the body exists
     if (!document.getElementById("person")) {
         let body = document.createElement("img");
         body.src = "assets/dressup/body.png";
@@ -74,11 +71,11 @@ function initCharacter() {
         character.appendChild(body);
     }
 
-    // ✅ Add default hair
+    // Add default hair
     if (!document.getElementById("hair-back")) {
         console.log("no hair")
         let hairBack = document.createElement("img");
-        hairBack.src = "assets/dressup/hairBack_3.png"; // Update with your default hair-back image
+        hairBack.src = "assets/dressup/hairBack_3.png";
         hairBack.id = "hair-back";
         hairBack.classList.add("center", "center-fit");
         hairBack.style.position = "absolute";
@@ -91,7 +88,7 @@ function initCharacter() {
 
     if (!document.getElementById("hair-front")) {
         let hairFront = document.createElement("img");
-        hairFront.src = "assets/dressup/hairFront_1.png"; // Update with your default hair-front image
+        hairFront.src = "assets/dressup/hairFront_1.png";
         hairFront.id = "hair-front";
         hairFront.classList.add("center", "center-fit");
         hairFront.style.position = "absolute";
@@ -100,7 +97,6 @@ function initCharacter() {
         character.appendChild(hairFront);
     }
 
-    // ✅ Reset selected clothing state (if you're tracking selected items)
     selectedClothes = {};
 }
 

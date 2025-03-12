@@ -48,9 +48,9 @@ const clothingItems = {
 
 };
 
-// ✅ Function to calculate score based on selected clothes and level number
+// Function to calculate score based on selected clothes and level number
 export function calculateScore(outfit, levelNumber) {
-    let level = levels[levelNumber]; // Get level data based on number
+    let level = levels[levelNumber];
     if (!level) {
         console.error(`Invalid level number: ${levelNumber}`);
         return 0;
@@ -69,11 +69,11 @@ export function calculateScore(outfit, levelNumber) {
         let itemData = Object.values(clothingItems).flat().find(i => i.name === item);
         if (!itemData) return;
 
-        // ✅ Calculate category score for the specified theme
+        //Calculate category score for the specified theme
         let itemPoints = itemData.points[level.theme] || 0;
         score += itemPoints;
 
-        // ❌ Breaks a rule
+        //Breaks a rule
         if (level.rules.some(rule => itemData.rules.includes(rule))) {
             score -= 5;
         }

@@ -1,34 +1,37 @@
 const minScore = 50; // Minimum score required to proceed
 
 function showScoreScreen(finalScore) {
+    const canvas = document.getElementById("confettiCanvas");
+    canvas.style.zIndex = -1;
     const scoreDisplay = document.getElementById("scoreNumber");
     const stageScreen = document.getElementById("stage-complete-screen");
-    const stageTitle = stageScreen.querySelector("h2"); // Get the heading
+    const stageTitle = stageScreen.querySelector("h2");
     const message = document.getElementById("scoreMessage");
 
     let currentScore = 0;
     stageScreen.style.display = "block";
-    message.textContent = "Calculating Score..."; // Show loading message
+    message.textContent = "Calculating Score...";
     scoreDisplay.textContent = "0";
 
     // Animated Score Counter
     const scoreInterval = setInterval(() => {
         if (currentScore >= finalScore) {
             clearInterval(scoreInterval);
-            message.textContent = "Your Score:"; // Change text after calculation
-            revealStars(finalScore); // Show stars after score completes
+            message.textContent = "Your Score:";
+            revealStars(finalScore);
 
-            // **🔹 Check if level is passed or failed**
+            // Check if level is passed or failed**
             if (finalScore >= minScore) {
-                stageTitle.textContent = "Stage Complete! 🎉"; // Normal completion
-                startConfetti(); // 🎉 Start confetti if passed
+                stageTitle.textContent = "Stage Complete! 🎉";
+                canvas.style.zIndex = 1;
+                startConfetti();
                 playSound('success-sound');
             } else {
-                stageTitle.textContent = "Try Again! 😢"; // Level failed message
+                stageTitle.textContent = "Try Again! 😢";
                 playSound('fail-sound');
             }
         } else {
-            currentScore += Math.ceil(finalScore / 50); // Adjust step for smoothness
+            currentScore += Math.ceil(finalScore / 50);
             scoreDisplay.textContent = currentScore;
         }
     }, 30);

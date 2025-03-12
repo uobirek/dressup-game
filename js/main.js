@@ -3,7 +3,7 @@ import { showDialog } from "./dialog.js";
 import { resetCharacter } from "./character.js";
 import { calculateScore } from "./scoring-system.js";
 import { showOptions, closeOptions } from "./ui.js";
-/*** 🔹 DOM Elements ***/
+
 const buttons = {
     start: document.getElementById("start-button"),
     options: document.getElementById("options-button"),
@@ -16,8 +16,6 @@ const buttons = {
 export let currentLevel = 1;
 const maxLevels = 3;
 
-
-/*** 🔹 Function to Move to Stage Complete ***/
 function finishDressup() {
     let score = calculateScore(selectedClothes, currentLevel);
 
@@ -26,21 +24,20 @@ function finishDressup() {
 
     // Change button behavior based on score
     if (score < minScore) {
-        buttons.nextStage.textContent = "Retry Level"; // Change button text
-        buttons.nextStage.onclick = retryLevel; // Set to retry
+        buttons.nextStage.textContent = "Retry Level";
+        buttons.nextStage.onclick = retryLevel;
     } else {
-        buttons.nextStage.textContent = "Next Level"; // Change button text
-        buttons.nextStage.onclick = nextStage; // Set to move forward
+        buttons.nextStage.textContent = "Next Level";
+        buttons.nextStage.onclick = nextStage;
     }
 
     resetCharacter();
 }
 function retryLevel() {
-    showDialog(currentLevel); // Restart the same level
-    resetCharacter(); // Reset dress-up choices
+    showDialog(currentLevel);
+    resetCharacter();
 }
 
-/*** 🔹 Function to Start Next Level or Finish Game ***/
 function nextStage() {
     if (currentLevel < maxLevels) {
         currentLevel++;
@@ -52,7 +49,7 @@ function nextStage() {
     }
 }
 
-/*** 🔹 Event Listeners ***/
+
 buttons.start.addEventListener("click", () => {
     playSound('background-music');
     addSparkles();

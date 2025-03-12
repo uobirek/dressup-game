@@ -14,9 +14,7 @@
 
 .right-column {
     flex-grow: 1;
-    /* Takes up ALL remaining space */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Keep content centered */
 }

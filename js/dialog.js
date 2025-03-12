@@ -1,6 +1,5 @@
 import { showScreen, screens } from "./ui.js";
 import { currentLevel } from "./main.js";
-/*** 🔹 Dialog System ***/
 let currentLine = 0;
 let typing = false;
 let interval;
@@ -36,12 +35,12 @@ const levelDialogs = {
 
 function getFairyImageById(imageId) {
     const imageMap = {
-        1: "assets/fairy/dressup-fairy-default.png", // Default image
-        2: "assets/fairy/dressup-fairy-sad.png",     // Sad image
-        3: "assets/fairy/dressup-fairy-winky.png"    // Winky image
+        1: "assets/fairy/dressup-fairy-default.png",
+        2: "assets/fairy/dressup-fairy-sad.png",
+        3: "assets/fairy/dressup-fairy-winky.png"
     };
 
-    return imageMap[imageId] || imageMap[1]; // Default to the first image if no match
+    return imageMap[imageId] || imageMap[1];
 }
 
 let levelThemeDiv = document.getElementById('level-theme');
@@ -50,14 +49,12 @@ const levelThemes = {
     2: "study session",
     3: "fancy date",
 };
-//const typingSound = new sound('assets/sounds/typing-sound.mp3');
 function printLetterByLetter(destination, message, speed, callback) {
     let i = 0;
     document.getElementById(destination).innerHTML = "";
     typing = true;
     interval = setInterval(() => {
         document.getElementById(destination).innerHTML += message.charAt(i);
-        // typingSound.play();  // Play typing sound on each letter
         i++;
         if (i >= message.length) {
             clearInterval(interval);
@@ -88,7 +85,6 @@ const fairyImages = {
 function changeFairyImage(imagePath) {
     const fairyImage = document.getElementById("fairy").querySelector("img");
 
-    // Update the image source
     fairyImage.src = imagePath;
 }
 
@@ -105,13 +101,10 @@ export function nextDialog(level) {
     if (typing) return;
 
     if (currentLine < levelDialogs[level].length) {
-        // Get the current dialog object for the line
         const currentDialog = levelDialogs[level][currentLine];
         const imagePath = getFairyImageById(currentDialog.imageId);
         changeFairyImage(imagePath);
-        // Print the dialog text
         printLetterByLetter("dialog-text", currentDialog.text, 3, () => {
-            // After printing the dialog, change the fairy image based on the imageId
 
         });
 

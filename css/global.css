@@ -12,7 +12,6 @@
     --image-shadow: rgba(144, 103, 45, 0.25);
 }
 
-/* Dark mode styles */
 body.dark-mode {
     --background-color: #121212;
     --text-color: #f0f0f0;
@@ -27,7 +26,6 @@ body.dark-mode {
     --image-shadow: rgba(18, 15, 10, 0.5);
 }
 
-/* Global Styles */
 body {
     font-family: 'Darumadrop One';
     text-align: center;
@@ -37,7 +35,6 @@ body {
     padding: 0;
 }
 
-/* Heading */
 h1 {
     font-family: 'Darumadrop One';
     font-size: clamp(50px, 9vw, 96px);

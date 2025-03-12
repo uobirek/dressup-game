@@ -2,7 +2,6 @@
     background-color: GhostWhite;
     border-radius: 50%;
     box-shadow: 0 0 var(--blur) var(--spread) rgba(255, 255, 224, 0.5);
-    /* GhostWhite with 50% opacity */
     height: var(--size);
     left: var(--left);
     position: absolute;
