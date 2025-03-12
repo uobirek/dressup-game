@@ -4,12 +4,11 @@
 
 ## 🎮 About the Game
 
-**Penelope's Closet** is a stylish and engaging dress-up game where players can mix and match different clothing items, hairstyles, and accessories to create unique looks. The game features a whimsical aesthetic with charming UI elements and a smooth drag-and-drop clothing system.
+**Penelope's Closet** is a dress-up game where players can mix and match different clothing items, hairstyles, and accessories to create unique looks. The game features charming UI elements and a smooth drag-and-drop clothing system.
 
 ## ✨ Features
 
 - 🏆 **Interactive Dress-up System** - Change clothes, hairstyles, and accessories dynamically.
-- 🎨 **Beautiful UI & Graphics** - A pastel-colored, soft aesthetic for a relaxing experience.
 - 🔊 **Sound Effects & Music** - Enjoy an immersive experience with background music and interactive sounds.
 - 🌙 **Dark Mode** - Toggle dark mode for a different visual experience.
 - ⭐ **Scoring System** - Get rated on your styling skills with a fun star-based scoring system.
