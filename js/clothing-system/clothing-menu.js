@@ -74,14 +74,14 @@ function createClothingButton(category, index) {
 
 
     let previewImg = document.createElement("img");
-    previewImg.src = `assets/previews/${category}_${index}.png`;
+    previewImg.src = `assets/previews/${category}_${index}.PNG`;
     previewImg.classList.add("clothing-preview", category);
 
     let previewDiv = document.createElement("div");
     previewDiv.appendChild(previewImg);
 
     button.appendChild(previewDiv);
-    makeDraggable(previewDiv, category, `${category}_${index}.png`);
+    makeDraggable(previewDiv, category, `${category}_${index}.PNG`);
 
     return button;
 }
