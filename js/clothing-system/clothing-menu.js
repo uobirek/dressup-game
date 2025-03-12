@@ -16,12 +16,27 @@ function generateClothingTabs() {
     Object.keys(clothingOptions).forEach((category, index) => {
         let tabButton = document.createElement("button");
         const icon = document.createElement("img");
+        const svgPath = `assets/icons/${category}.svg`;
+        const pngPath = `assets/icons/${category}.png`;
 
-        icon.src = `assets/icons/${category}.svg`;
+        fetch(svgPath, { method: "HEAD" })
+            .then(response => {
+                if (response.ok) {
+                    icon.src = svgPath;
+                    icon.style.width = "40px";  // Set consistent size for SVG
+                    icon.style.height = "40px";
+                } else {
+                    throw new Error("SVG not found"); // Force fallback to PNG
+                }
+            })
+            .catch(() => {
+                icon.src = pngPath;
+                icon.style.width = "60px"; // Adjust size for PNG
+                icon.style.height = "60px";
+            });
+
         icon.alt = category;
-        icon.style.width = "40px";
-        icon.style.height = "40px";
-        icon.style.objectFit = "contain";
+        icon.style.objectFit = "contain"; // Ensures it scales properly
 
         tabButton.appendChild(icon);
         tabButton.classList.add("tab-button");

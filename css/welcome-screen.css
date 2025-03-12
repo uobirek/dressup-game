@@ -9,6 +9,7 @@
 
 /* Menu Button */
 .menu-button {
+
     width: clamp(160px, 20vw, 210px);
     height: clamp(50px, 7vh, 60px);
     font-size: clamp(20px, 2vw + 2vh, 35px);

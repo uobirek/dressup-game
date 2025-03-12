@@ -1,6 +1,5 @@
 #next-dressup-button {
-    margin-top: 20px;
-    /* Adjust the value to your preference */
+    margin-top: 10px;
 }
 
 .clothes-menu {
@@ -8,11 +7,16 @@
     background-color: #F8E5B2;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
+    height: 70vh;
+    /* Takes up the full viewport height */
     width: 60vw;
+    /* Adjust width based on content or a fixed value if needed */
+    max-width: 60vw;
+
+    /* Prevent it from exceeding viewport width */
+    box-shadow: 0px 4px 4px rgba(144, 103, 45, 0.25);
 }
+
 
 .clothing-button {
     background-color: transparent;
