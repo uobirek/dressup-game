@@ -8,26 +8,26 @@ let interval;
 const levelDialogs = {
     1: [
         { text: "Penelope has a problem and I do too!", imageId: 1 },
-        { text: "She has a full closet but nothing to wear, so she summoned a fashion fairy. That's me.", imageId: 3 },
-        { text: "But it's my first day at job and I have no idea what to do. Can you help me?", imageId: 2 },
-        { text: "She's going to a coffee shop today with friends, so she needs to wear something casual but cute.", imageId: 1 },
-        { text: "And no high heels, because after coffee they're planning on a long walk!", imageId: 3 },
-        { text: "Come on! Let's help her!", imageId: 3 }
+        { text: "She has a closet full of clothes, but nothing to wear. So, she called on a fashion fairy. That's me!", imageId: 3 },
+        { text: "But it's my first day on the job, and I have no idea what I'm doing. Can you help me out?", imageId: 2 },
+        { text: "She's meeting friends at a coffee shop today, so she needs something cute but casual.", imageId: 1 },
+        { text: "Oh, and no high heels! They’re planning a long walk after coffee.", imageId: 3 },
+        { text: "Let's make sure she looks great! Ready to help?", imageId: 3 }
     ],
     2: [
-        { text: "It's me again! You're the best, I'm learning so much from you.", imageId: 1 },
-        { text: "This time Penelope has to study for an algebra exam.", imageId: 2 },
-        { text: "Even trying to think about it makes my head explode!", imageId: 2 },
-        { text: "She's going to stay at home and needs to be comfy.", imageId: 1 },
-        { text: "So no shoes needed! But a comfy pair of socks would be perfect.", imageId: 1 }
+        { text: "Hey, it's me again! You're the best, I'm learning so much from you.", imageId: 1 },
+        { text: "This time, Penelope's got an algebra exam to study for.", imageId: 2 },
+        { text: "Honestly, just thinking about it makes my head spin!", imageId: 2 },
+        { text: "She'll be staying home, so we need to pick something comfy for her.", imageId: 1 },
+        { text: "No shoes needed today, but a comfy pair of socks would be perfect!", imageId: 1 }
 
     ],
     3: [
-        { text: "Thank you soooo much for all the help!", imageId: 1 },
-        { text: "This time let's do something fancy!", imageId: 3 },
-        { text: "Penelope's going on a date! She needs to look cute.", imageId: 3, },
-        { text: "It's the final outfit for today, so let's do something extra! Remember to prepare some gorgeous jewellery.", imageId: 3, },
-        { text: "Let's do it!", imageId: 3, }
+        { text: "Thank you soooo much for all your help!", imageId: 1 },
+        { text: "Now, let’s go for something fancy!", imageId: 3 },
+        { text: "Penelope's going on a date tonight, and she wants to look amazing.", imageId: 3, },
+        { text: "This is the final outfit of the day, so let's go all out! Don't forget some stunning jewelry.", imageId: 3, },
+        { text: "Ready to make her shine?", imageId: 3, }
 
 
     ]
