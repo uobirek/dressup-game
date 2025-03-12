@@ -1,4 +1,6 @@
 
+
+
 function generateClothingTabs() {
     const menu = document.querySelector(".clothes-menu");
 

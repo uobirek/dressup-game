@@ -22,8 +22,10 @@ function showScoreScreen(finalScore) {
             if (finalScore >= minScore) {
                 stageTitle.textContent = "Stage Complete! 🎉"; // Normal completion
                 startConfetti(); // 🎉 Start confetti if passed
+                playSound('success-sound');
             } else {
                 stageTitle.textContent = "Try Again! 😢"; // Level failed message
+                playSound('fail-sound');
             }
         } else {
             currentScore += Math.ceil(finalScore / 50); // Adjust step for smoothness
@@ -58,7 +60,6 @@ function revealStars(score) {
             stars[2].style.opacity = "0.2";
         }
 
-        setTimeout(startConfetti, 500); // 🎉 Start confetti after stars appear
     }, 500);
 }
 

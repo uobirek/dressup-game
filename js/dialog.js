@@ -19,12 +19,18 @@ const levelDialogs = {
         { text: "It's me again! You're the best, I'm learning so much from you.", imageId: 1 },
         { text: "This time Penelope has to study for an algebra exam.", imageId: 2 },
         { text: "Even trying to think about it makes my head explode!", imageId: 2 },
-        { text: "She's going to stay at home and needs to be comfy. And no shoes!", imageId: 1 }
+        { text: "She's going to stay at home and needs to be comfy.", imageId: 1 },
+        { text: "So no shoes needed! But a comfy pair of socks would be perfect.", imageId: 1 }
+
     ],
     3: [
         { text: "Thank you soooo much for all the help!", imageId: 1 },
         { text: "This time let's do something fancy!", imageId: 3 },
-        { text: "Penelope's going on a date! Prepare something pretty and some jewelry.", imageId: 3 }
+        { text: "Penelope's going on a date! She needs to look cute.", imageId: 3, },
+        { text: "It's the final outfit for today, so let's do something extra! Remember to prepare some gorgeous jewellery.", imageId: 3, },
+        { text: "Let's do it!", imageId: 3, }
+
+
     ]
 };
 
@@ -42,7 +48,7 @@ let levelThemeDiv = document.getElementById('level-theme');
 const levelThemes = {
     1: "coffee & walk",
     2: "study session",
-    3: "fancy",
+    3: "fancy date",
 };
 //const typingSound = new sound('assets/sounds/typing-sound.mp3');
 function printLetterByLetter(destination, message, speed, callback) {

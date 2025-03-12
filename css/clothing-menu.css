@@ -81,3 +81,8 @@
 .remove-button:hover {
     background-color: #cc0000;
 }
+
+#level-theme {
+    font-size: 3vh;
+
+}

@@ -9,6 +9,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    background: linear-gradient(#cb72b4, #FFFEFF);
+
 }
 
 /* Row Flexbox */
