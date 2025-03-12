@@ -35,7 +35,8 @@ Make sure you have a web browser (Chrome, Firefox, Edge) installed.
    ```sh
    git clone https://github.com/yourusername/dressup-game.git
 2. **Navigate to the Project Folder**  
-  cd dressup-game
+   ```sh
+     cd dressup-game
 
 3. **Open index.html in a Browser**
   Simply open the file in any modern web browser to start playing.
