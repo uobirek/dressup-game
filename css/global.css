@@ -1,9 +1,38 @@
+:root {
+    --background-color: #ffe4ec;
+    --text-color: #ff69b4;
+    --heading-color: #F8E5B2;
+    --border-color: #EDD594;
+    --gradient-start: #F8CCED;
+    --gradient-end: #FFFEFF;
+    --shadow-color: #A8236C;
+    --dialog-bg: #FFFBFB;
+    --dialog-text-color: #B462A1;
+    --hover-bg: #ffeff8;
+    --image-shadow: rgba(144, 103, 45, 0.25);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f0f0f0;
+    --heading-color: #F8E5B2;
+    --border-color: #EDD594;
+    --gradient-start: #554952;
+    --gradient-end: #1c0616;
+    --shadow-color: #6200EE;
+    --dialog-bg: #654f5f;
+    --dialog-text-color: #E1B6FF;
+    --hover-bg: #4e3447;
+    --image-shadow: rgba(18, 15, 10, 0.5);
+}
+
 /* Global Styles */
 body {
     font-family: 'Darumadrop One';
     text-align: center;
-    background-color: #ffe4ec;
-    color: #ff69b4;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
@@ -13,8 +42,8 @@ h1 {
     font-family: 'Darumadrop One';
     font-size: clamp(50px, 9vw, 96px);
     paint-order: stroke fill;
-    color: #F8E5B2;
-    text-shadow: 0px 4px 4px #A8236C;
+    color: var(--heading-color);
+    text-shadow: 0px 4px 4px var(--shadow-color);
     -webkit-text-stroke: 0.2em #E879B6;
     line-height: clamp(40px, 8.5vw, 80px);
 }
@@ -25,48 +54,21 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(#F8CCED, #FFFEFF);
+    background: linear-gradient(var(--gradient-start), var(--gradient-end));
     height: max(600px, 95vh);
     width: max(600px, 95vw);
 
     box-sizing: border-box;
     border-radius: 30px;
-    border: 8px solid #EDD594;
+    border: 8px solid var(--border-color);
     overflow: hidden;
     padding: 20px;
 }
 
 #outer-container {
-    background: #F8E5B2;
+    background: var(--heading-color);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #222 !important;
-    color: #ffb6c1 !important;
-}
-
-body.dark-mode h1 {
-    color: #ff69b4 !important;
-}
-
-body.dark-mode button {
-    color: white !important;
-    background: rgba(255, 255, 255, 0.2) !important;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-body.dark-mode button:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
-}
-
-body.dark-mode .modal {
-    background-color: #333 !important;
-    color: white !important;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
