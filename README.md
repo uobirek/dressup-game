@@ -40,6 +40,4 @@ Make sure you have a web browser (Chrome, Firefox, Edge) installed.
 
 3. **Open index.html in a Browser**
   Simply open the file in any modern web browser to start playing.
-## 🎵 Credits
 
-Game Design, Development, and Graphics: [Your Name]
