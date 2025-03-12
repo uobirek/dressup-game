@@ -20,6 +20,8 @@
 
 
 #fairy img {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(144, 103, 45, 0.25));
+    filter: drop-shadow(5px 5px 5px rgba(144, 103, 45, 0.25));
     width: 25vw;
     /* Adjust this value as needed */
     height: auto;

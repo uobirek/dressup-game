@@ -32,7 +32,7 @@
         <div id="welcome-screen" class="screen">
             <h1>Penelope's<br /> Closet</h1>
             <button id="start-button" class="menu-button">Start</button>
-            <button id="options-button" class="menu-button">Options</button>
+            <button id="options-button" class="menu-button" onclick="playSound('button-click-sound')">Options</button>
         </div>
 
 
@@ -87,7 +87,7 @@
         <!-- Options Modal (Initially Hidden) -->
         <div id="options-modal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span id="close-options" class="close">&times;</span>
                 <h2>Settings</h2>
                 <label>
                     <input type="checkbox" id="sound-toggle"> Sound
@@ -99,6 +99,10 @@
             </div>
         </div>
     </div>
+    <audio id="button-click-sound" src="/sounds/button_click_1.mp3"></audio>
+    <audio id="shiny-sound" src="/sounds/click.wav"></audio>
+
+    <audio id="background-music" src="/sounds/walz.mp3" loop></audio>
 
     <script src="js/clothing-system/character.js"></script>
     <script src="js/clothing-system/clothing-menu.js"></script>

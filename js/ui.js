@@ -6,6 +6,7 @@ export const screens = {
     dialog: document.getElementById("dialog-screen"),
     game: document.getElementById("game-screen"),
     stageComplete: document.getElementById("stage-complete-screen"),
+    options: document.getElementById("options-modal"),
 };
 
 // Function to switch screens
@@ -28,4 +29,11 @@ darkModeToggle.addEventListener("change", () => {
     localStorage.setItem("darkMode", darkModeToggle.checked ? "enabled" : "disabled");
 });
 
-export { showScreen };
+function showOptions() {
+    screens.options.style.display = "block";
+}
+function closeOptions() {
+    screens.options.style.display = "none";
+}
+
+export { showScreen, showOptions, closeOptions };

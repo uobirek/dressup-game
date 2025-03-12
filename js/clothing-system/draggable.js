@@ -4,7 +4,6 @@ function makeDraggable(element, category, item) {
     let translateX = 0, translateY = 0;
     let originalParent = element.parentElement;
     let originalTransform = element.style.transform;
-    let clickSound = new sound('sounds/click.wav');
 
     element.style.transform = "translate3d(0px, 0px, 0px)";
     element.style.willChange = "transform";
@@ -40,7 +39,7 @@ function makeDraggable(element, category, item) {
 
         if (isInside) {
             changeClothes(category, item);
-            clickSound.play();
+            playSound('shiny-sound');
             resetTab(category);
             element.remove();
         } else {

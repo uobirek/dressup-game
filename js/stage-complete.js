@@ -43,8 +43,19 @@ function revealStars(score) {
         } else if (score >= 100) {
             stars[0].style.opacity = "1";
             stars[1].style.opacity = "1"; // 2 stars
+            stars[2].style.opacity = "0.2";
+
         } else if (score >= 50) {
             stars[0].style.opacity = "1"; // 1 star
+            stars[1].style.opacity = "0.2";
+
+            stars[2].style.opacity = "0.2";
+
+        } else {
+            stars[0].style.opacity = "0.2";
+            stars[1].style.opacity = "0.2";
+
+            stars[2].style.opacity = "0.2";
         }
 
         setTimeout(startConfetti, 500); // 🎉 Start confetti after stars appear

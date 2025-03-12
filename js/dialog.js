@@ -44,14 +44,14 @@ const levelThemes = {
     2: "study session",
     3: "fancy",
 };
-
-// Typing effect
+//const typingSound = new sound('assets/sounds/typing-sound.mp3');
 function printLetterByLetter(destination, message, speed, callback) {
     let i = 0;
     document.getElementById(destination).innerHTML = "";
     typing = true;
     interval = setInterval(() => {
         document.getElementById(destination).innerHTML += message.charAt(i);
+        // typingSound.play();  // Play typing sound on each letter
         i++;
         if (i >= message.length) {
             clearInterval(interval);
@@ -87,6 +87,8 @@ function changeFairyImage(imagePath) {
 }
 
 export function nextDialog(level) {
+
+
     console.log("nextDialog called with level:", level);
 
     if (!level || !levelDialogs[level]) {
@@ -102,7 +104,7 @@ export function nextDialog(level) {
         const imagePath = getFairyImageById(currentDialog.imageId);
         changeFairyImage(imagePath);
         // Print the dialog text
-        printLetterByLetter("dialog-text", currentDialog.text, 50, () => {
+        printLetterByLetter("dialog-text", currentDialog.text, 3, () => {
             // After printing the dialog, change the fairy image based on the imageId
 
         });
@@ -116,6 +118,6 @@ export function nextDialog(level) {
     }
 }
 
-document.getElementById("dialog-box").addEventListener("click", () => nextDialog(currentLevel));
+document.getElementById("dialog-box").addEventListener("click", () => { playSound('button-click-sound'); nextDialog(currentLevel) });
 
 

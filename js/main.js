@@ -2,13 +2,16 @@ import { showScreen, screens } from "./ui.js";
 import { showDialog } from "./dialog.js";
 import { resetCharacter } from "./character.js";
 import { calculateScore } from "./scoring-system.js";
+import { showOptions, closeOptions } from "./ui.js";
 /*** 🔹 DOM Elements ***/
 const buttons = {
     start: document.getElementById("start-button"),
     options: document.getElementById("options-button"),
     nextDressup: document.getElementById("next-dressup-button"),
     nextStage: document.getElementById("next-stage-button"),
+    closeOptions: document.getElementById("close-options")
 };
+
 
 export let currentLevel = 1;
 const maxLevels = 3;
@@ -50,7 +53,11 @@ function nextStage() {
 }
 
 /*** 🔹 Event Listeners ***/
-buttons.start.addEventListener("click", () => showDialog(currentLevel));
+buttons.start.addEventListener("click", () => {
+    playSound('background-music');
+    showDialog(currentLevel)
+});
 
-
+buttons.options.addEventListener("click", showOptions)
 buttons.nextDressup.addEventListener("click", finishDressup);
+buttons.closeOptions.addEventListener("click", closeOptions);
