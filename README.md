@@ -20,23 +20,8 @@
 - **CSS3** - Styling and animations.
 - **JavaScript (ES6)** - Core logic and interactions.
 
-## 🚀 Getting Started
+## 🚀 Play the Game Online
 
-Follow these steps to set up and play the game on your local machine.
-
-### Prerequisites
-
-Make sure you have a web browser (Chrome, Firefox, Edge) installed.
-
-### Installation
-
-1. **Clone the Repository**  
-   ```sh
-   git clone https://github.com/yourusername/dressup-game.git
-2. **Navigate to the Project Folder**  
-   ```sh
-     cd dressup-game
-
-3. **Open index.html in a Browser**
-  Simply open the file in any modern web browser to start playing.
-
+**Visit the Game on GitHub Pages**
+Simply go to the following URL in your web browser:
+https://uobirek.github.io/dressup-game/
