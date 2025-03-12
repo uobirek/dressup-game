@@ -6,13 +6,13 @@ const levels = {
 
 const clothingItems = {
     tops: [
-        { name: "top_1.png", points: { casual: 4, comfy: 2, fancy: 3 }, rules: [] },
-        { name: "top_2.png", points: { casual: 2, comfy: 5, fancy: 1 }, rules: [] },
-        { name: "top_3.png", points: { casual: 4, comfy: 3, fancy: 1 }, rules: [] },
-        { name: "top_4.png", points: { casual: 3, comfy: 1, fancy: 5 }, rules: [] },
-        { name: "top_5.png", points: { casual: 4, comfy: 2, fancy: 4 }, rules: [] },
-        { name: "top_6.png", points: { casual: 4, comfy: 2, fancy: 5 }, rules: ["no white"] },
-        { name: "top_7.png", points: { casual: 3, comfy: 2, fancy: 2 }, rules: [] },
+        { name: "top_1.PNG", points: { casual: 4, comfy: 2, fancy: 3 }, rules: [] },
+        { name: "top_2.PNG", points: { casual: 2, comfy: 5, fancy: 1 }, rules: [] },
+        { name: "top_3.PNG", points: { casual: 4, comfy: 3, fancy: 1 }, rules: [] },
+        { name: "top_4.PNG", points: { casual: 3, comfy: 1, fancy: 5 }, rules: [] },
+        { name: "top_5.PNG", points: { casual: 4, comfy: 2, fancy: 4 }, rules: [] },
+        { name: "top_6.PNG", points: { casual: 4, comfy: 2, fancy: 5 }, rules: ["no white"] },
+        { name: "top_7.PNG", points: { casual: 3, comfy: 2, fancy: 2 }, rules: [] },
 
     ],
     bottoms: [
