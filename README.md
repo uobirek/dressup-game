@@ -6,6 +6,15 @@
 
 **Penelope's Closet** is a dress-up game where players can mix and match different clothing items, hairstyles, and accessories to create unique looks. The game features charming UI elements and a smooth drag-and-drop clothing system.
 
+## 🖼️ Game Preview
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e54cd1c4-3bb0-456e-8367-4a0b63545c35" width="33%" />
+  <img src="https://github.com/user-attachments/assets/299af913-f0ec-4e86-93d6-afe9a99084d7" width="33%" />
+  <img src="https://github.com/user-attachments/assets/e486440d-edb7-4ec8-9fc4-c25dbd1d17ca" width="33%" />
+
+</div>
+
 ## ✨ Features
 
 - 🏆 **Interactive Dress-up System** - Change clothes, hairstyles, and accessories dynamically.
@@ -22,6 +31,5 @@
 
 ## 🚀 Play the Game Online
 
-**Visit the Game on GitHub Pages**
-Simply go to the following URL in your web browser:
-https://uobirek.github.io/dressup-game/
+**Visit the Game on GitHub Pages**  
+👉 [Play Now](https://uobirek.github.io/dressup-game/)
